@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'categories.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -45,10 +44,7 @@ class MyHomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8)),
                 backgroundColor: Colors.orange[900]),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const MyCategories()),
-              );
+             Navigator.pushNamed(context, '/categories');
             },
             child: const Padding(
               padding: EdgeInsets.all(12),

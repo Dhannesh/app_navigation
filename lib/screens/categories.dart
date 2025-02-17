@@ -1,4 +1,3 @@
-import 'products.dart';
 import 'package:flutter/material.dart';
 
 class MyCategories extends StatelessWidget {
@@ -48,10 +47,7 @@ class MyCategories extends StatelessWidget {
             backgroundColor: Colors.orange[200],
           ),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const SnacksAndBeverages()),
-            );
+           Navigator.pushNamed(context, '/snacks_beverages');
           },
           child: const Padding(
             padding: EdgeInsets.all(12),
@@ -71,10 +67,7 @@ class MyCategories extends StatelessWidget {
             backgroundColor: Colors.orange[200],
           ),
           onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const FreshFruitsAndVegetablesProducts()),
-            );
+           Navigator.pushNamed(context, '/fruits_vegetables');
           },
           child: const Padding(
             padding: EdgeInsets.all(12),

@@ -14,8 +14,8 @@ List<Product> snackAndBeverages = [
   Product(image: 'images/lemonade.jpg', title: 'Lemonade'),
 ];
 
-class SnacksAndBeverages extends StatelessWidget {
-  const SnacksAndBeverages({super.key});
+class SnacksAndBeveragesProducts extends StatelessWidget {
+  const SnacksAndBeveragesProducts({super.key});
 
   @override
   Widget build(BuildContext context) {
