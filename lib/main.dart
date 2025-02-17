@@ -1,6 +1,4 @@
-import 'screens/home.dart';
-import 'screens/categories.dart';
-import 'screens/products.dart';
+import 'route_generator.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,15 +10,9 @@ class MyStore extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const MyHomePage(),
-        '/home': (context) => const MyHomePage(),
-        '/categories': (context) => const MyCategories(),
-        '/products': (context) => const Products(),
-      },
+    return const MaterialApp(
       title: 'Insta Store',
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
