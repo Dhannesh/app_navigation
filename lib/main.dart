@@ -18,8 +18,7 @@ class MyStore extends StatelessWidget {
         '/': (context) => const MyHomePage(),
         '/home': (context) => const MyHomePage(),
         '/categories': (context) => const MyCategories(),
-        '/snacks_beverages': (context) => const SnacksAndBeveragesProducts(),
-        '/fruits_vegetables': (context) => const FreshFruitsAndVegetablesProducts(),
+        '/products': (context) => const Products(),
       },
       title: 'Insta Store',
     );

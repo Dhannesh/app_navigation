@@ -44,7 +44,7 @@ class MyHomePage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8)),
                 backgroundColor: Colors.orange[900]),
             onPressed: () {
-             Navigator.pushNamed(context, '/categories');
+             Navigator.pushNamed(context, '/categories', arguments: {"subtitle":"I'm glad you choose to shop"});
             },
             child: const Padding(
               padding: EdgeInsets.all(12),

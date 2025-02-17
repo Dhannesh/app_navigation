@@ -5,6 +5,8 @@ class MyCategories extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var arguments = ModalRoute.of(context)?.settings.arguments as Map;
+
     return Scaffold(
       backgroundColor: Colors.brown[100],
       appBar: AppBar(
@@ -24,8 +26,8 @@ class MyCategories extends StatelessWidget {
                   bottom: BorderSide(color: Color(0x776ae792), width: 20))),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: const [
-              Text(
+            children:  [
+             const Text(
                 'Categories',
                 style: TextStyle(
                     fontSize: 30,
@@ -34,7 +36,7 @@ class MyCategories extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.all(15),
-                child: Text('Here are the category',
+                child: Text('${arguments["subtitle"]}',
                     style: TextStyle(fontSize: 20, color: Colors.black)),
               )
             ],
@@ -47,7 +49,7 @@ class MyCategories extends StatelessWidget {
             backgroundColor: Colors.orange[200],
           ),
           onPressed: () {
-           Navigator.pushNamed(context, '/snacks_beverages');
+           Navigator.pushNamed(context, '/products', arguments: {"category":"snacks_beverages"});
           },
           child: const Padding(
             padding: EdgeInsets.all(12),
@@ -67,7 +69,7 @@ class MyCategories extends StatelessWidget {
             backgroundColor: Colors.orange[200],
           ),
           onPressed: () {
-           Navigator.pushNamed(context, '/fruits_vegetables');
+           Navigator.pushNamed(context, '/products',arguments: {'category':'fruits_vegetables'});
           },
           child: const Padding(
             padding: EdgeInsets.all(12),
