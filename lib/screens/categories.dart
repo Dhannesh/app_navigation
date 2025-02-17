@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MyCategories extends StatelessWidget {
-  const MyCategories({super.key});
+class MyCategoriesPage extends StatelessWidget {
+  final dynamic args;
+  const MyCategoriesPage({super.key,required this.args});
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +37,7 @@ class MyCategories extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.all(15),
-                child: Text('${arguments["subtitle"]}',
+                child: Text('${args["subtitle"]}',
                     style: TextStyle(fontSize: 20, color: Colors.black)),
               )
             ],

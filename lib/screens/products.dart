@@ -27,7 +27,8 @@ Map<String, List<Product>> productsMap = {
 };
 
 class Products extends StatelessWidget {
-  const Products({super.key});
+  final dynamic args;
+  const Products({super.key, required this.args});
 
   @override
   Widget build(BuildContext context) {
